@@ -1,0 +1,96 @@
+{{!--
+// -----------------------------------------------------------------------------
+// -- Generic NodeJS Application: MVC Design
+// -- File: home : Index.handlebars
+// -- Description:
+// -- Author:
+// -- Date:
+// -- Version: 
+// -----------------------------------------------------------------------------
+
+--}}
+
+<!DOCTYPE html>
+  <head>
+    <title>home</title>
+  </head>
+
+  <body>   
+        
+    {{!-- -------------------------------------------------------------------- --}}
+
+    <div id="greetingmessage">
+        <p>
+          Lorem ipsum dolor sit amet consectetuer adipiscing elit. Senectus fusce dui enim hendrerit hymenaeos morbi. Vitae pharetra. Luctus ut nullam enim dis dis quam. Commodo in per et fringilla ridiculus lorem! Lorem sodales massa sed libero adipiscing sodales duis id cursus curabitur vestibulum. Euismod elit nascetur. Aliquam lacus in lorem ve est ultricies dictum ridiculus felis a. Donec ipsum eu proin aptent. Tempus vivamus praesent. Imperdiet augue sodales elementum pharetra dolor sit purus sociis mattis platea adipiscing nec vehicula. Eros libero a nisi penatibus dictum.
+        </p>
+    </div>
+
+
+    {{!-- ---------------------------------------------------------------------- --}}
+    {{!-- ------------------------- Graph1 : Injected Data --------------------- --}}
+    {{!-- ---------------------------------------------------------------------- --}}        
+
+    <div id="barchart"></div>
+
+     {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>  --}}
+     <script src="/js/Chart.min.js"></script>
+
+     </head>
+     <body>
+
+      <div class="container">
+        <br><h2>Test Summary: Integration</h2><br><br>
+        <div id="chartWindow" >
+          <canvas id="summaryChart"></canvas>
+        </div>
+      </div>
+
+     <script>
+        var ctx = document.getElementById("summaryChart").getContext('2d');
+        var summaryChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['v2.1', 'v2.2', 'v2.3', 'v2.4', 'v2.5', 'v2.6', 'v2.7', 'v2.8', 'v2.9', 'v3.0', 'v3.1', 'v3.2'],
+            datasets: [{
+              label: 'Code Version',
+              //backgroundColor: [{{{pfresult}}}],
+              data: [2, 29, 5, 9, 2, 3, 10, 6, 8, 2, 11, 4],
+              data: [26, 28, 26, 23, 17, 18, 22, 25, 30, 27, 24, 20],
+              //backgroundColor: "rgba(153,255,51,0.4)"
+              //backgroundColor: "rgba(51,92,225,0.5)"
+              backgroundColor: ["#006600", "#006600", "#990000", "#006600", "#006600", "#990000", "#006600", "#990000", "#006600", "#006600", "#006600", "#006600"],
+            }]
+          },
+
+          options: {
+            scales: {
+              xAxes: [{
+                scaleLabel: {
+                  display: true,
+                  labelString: 'Version'
+                }
+              }],
+              yAxes: [{
+                scaleLabel: {
+                  display: true,
+                  labelString: 'Test Time (min)'
+                }
+              }]
+            },
+            legend: {
+              display: false
+            }
+          }
+      });
+
+     </script>
+
+    {{!-- ---------------------------------------------------------------------- --}}
+    {{!-- ------------------------- Graph1 : End Injected Data ----------------- --}}
+    {{!-- ---------------------------------------------------------------------- --}}  
+
+
+
+  </body>
+</html>
+

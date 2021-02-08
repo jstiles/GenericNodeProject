@@ -1,0 +1,22 @@
+{
+  "name": "mvc-express-application",
+  "description": "An Express.js application using the MVC design pattern...",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "1.4.3",
+    "errorhandler": "1.1.1",
+    "express": "^3.5.0",
+    "express-handlebars": "3.0.0",
+    "express-session": "^1.14.2",
+    "handlebars": "^4.0.11",
+    "mongoose": "^5.0.3",
+    "morgan": "1.1.1",
+    "q": "^1.0.1"
+  },
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

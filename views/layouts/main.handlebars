@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+{{!-- 
+// -----------------------------------------------------------------------------
+// -- Generic NodeJS Application: MVC Design
+// -- File: main.handlebars
+// -- Description:
+// -- Author:
+// -- Date:
+// -- Version: 
+// -----------------------------------------------------------------------------
+ --}}
+
+ 	{{!-- -------------------------------------------------------------------- --}}
+    {{!-- Head :  --}} 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	    <title> </title>        
+        {{!-- Bootstrap core CSS  --}}
+        <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+        {{!-- Material Design Bootstrap  --}}
+        <link href="/bootstrap/css/mdb.css" rel="stylesheet">
+        {{!-- our custom styles (optional)  --}}
+        <link href="/bootstrap/css/style.css" rel="stylesheet"> 
+        {{!-- project css --}}
+        <link href="/css/master.css" rel="stylesheet"> 
+    </head>
+
+
+    {{!-- -------------------------------------------------------------------- --}}
+    {{!-- Body --}} 
+    <body>
+        
+        {{!--  Page Header --}}
+
+        <div id="topcontainer">
+            <p class="titlebig" style="display:inline" > &nbsp;Demo App </p> 
+            <p class="titlesmall" style="display:inline">subtitle</p> 
+            <p class="titletiny" style="display:inline" > &nbsp;Version : v0.0.0 </p> 
+            <p class="titletiny" style="display:inline" > &nbsp;
+                <script> document.write(new Date().toLocaleDateString()); </script>
+            </p> 
+            
+            {{!-- images in upper right corner of page --}}
+            <img id="generic-image1" src="/img/twinrocks.jpeg" alt="twinrocks"/>    
+            <img id="generic-image3" src="/img/twinrocks.jpeg" alt="twinrocks"/> 
+            <img id="generic-image2" src="/img/twinrocks.jpeg"  alt="twinrocks"/> 
+        </div>
+
+        {{!-- Horizontal line --}}
+        <div class="line1">
+            <hr>
+        </div>
+        
+        {{!-- -------------- Navigation --------------- --}}
+            <!-- Nav tabs -->
+            <div class="tabs-wrapper navbar-fixed-top"> 
+              <ul class="nav classic-tabs tabs-cyan" role="tablist">
+                  <li class="nav-item">
+                      <a class="nav-link waves-light" data-toggle="tab" href="/" role="tab">Home</a>
+                  </li>
+                   <li class="nav-item">
+                      <a class="nav-link waves-light" data-toggle="tab" href="/targets" role="tab">Targets</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link waves-light" data-toggle="tab" href="/config" role="tab">Config</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link waves-light" data-toggle="tab" href="/build" role="tab">Build</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link waves-light" data-toggle="tab" href="/table" role="tab">Report</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link waves-light" data-toggle="tab" href="/status" role="tab">Status</a>
+                  </li>
+                   <li class="nav-item">
+                      <a class="nav-link waves-light" data-toggle="tab" href="/help" role="tab">Help</a>
+                  </li>
+              </ul>
+            </div>
+
+        {{!-- Horizontal line --}}
+        <div class="line1">
+            <hr>
+        </div>
+
+    	{{!-- -------------------------------------------------------------------- --}}
+
+        {{!-- -------------------------------------------------------------------- --}}
+        {{{body}}}
+        {{!-- -------------------------------------------------------------------- --}}
+	     
+		{{!-- Horizontal line --}}
+        <div class="line1">
+            <hr>
+        </div>
+
+	    {{!-- Footer --}} 
+		<footer>
+			<BR>
+            {{!-- Links to other tools--}}
+            <div id="allbuttonicons"> 
+                
+            </div>
+                
+                
+            {{!-- Bottom of page --}}
+            <BR>
+            <div id="genericbottomtext">
+                <p class="titlelittle" style="display:inline" > &nbsp;
+                    &copy; Demo App : subtitle : Version : v0.0.0
+                    <script> document.write(new Date().toLocaleDateString()); </script>
+                </p>   
+            </div>  
+                
+		</footer>
+            
+    </body>
+</html>
+
+{{!-- -------------------------------------------------------------------- --}}
+{{!-- JS libraries and table column sort and resizer  --}}
+{{!-- Keep this stuff at bottom of file.  --}}
+{{!-- Do not relocate to head.  --}}
+
+{{!-- JQuery --}}
+{{!-- <script type="text/javascript" src="/js/jquery.js"></script> --}}
+<script type="text/javascript" src="/bootstrap/js/jquery.js"></script>
+<script type="text/javascript" src="/js/modernizr.js"></script
+
+{{!-- Bootstrap core JavaScript --}}
+<script type="text/javascript" src="/bootstrap/js/popper.min.js"></script>
+<script type="text/javascript" src="/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="/bootstrap/js/mdb.min.js"></script>
+
+{{!-- Sort and Resize Table --}}
+<script type="text/javascript" src="/js/sorttable.js"></script>
+<script src="/js/colResizable.min.js"></script>
+    
+{{!-- Invoke column resizer --}}
+<script>
+$(function(){
+  $("table").colResizable();
+});
+</script>
+
+{{!-- -------------------------------------------------------------------- --}}

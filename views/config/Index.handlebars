@@ -1,0 +1,81 @@
+{{!-- 
+// -----------------------------------------------------------------------------
+// -- Generic NodeJS Application: MVC Design
+// -- File: config : Index.handlebars
+// -- Description:
+// -- Author:
+// -- Date:
+// -- Version: 
+// -----------------------------------------------------------------------------
+ --}}
+
+<h1 class="indentTextBold">{{title}}</h1>
+
+<br>
+<br>
+
+<div id="generic-image111">
+      <img class="graphImage" src="/img/SiteUnderConstruction.jpg" alt="Image failed to render !!!">
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{{#each config}}
+<div class="editLink">
+  <a href="/config/edit/{{ _id }}"><strong>Edit</strong></a><br>
+</div>
+{{/each}}
+
+
+<div class="tabletitles" >
+    <table class="sortable" id="configtable" >
+    <BR>
+    <tr> 
+      <th width="30%">Parameter</th> 
+      <th width="70%">Value</th>
+    </tr>
+
+    {{#each config}}
+      <tr align="left"> <td>Test Manager Enable</td> <td>{{testmgrenable}}</td> </tr>
+      <tr align="left"> <td>Shutdown</td> <td>{{testmgrshutdown}}</td> </tr>
+      <tr align="left"> <td>Build Directory</td> <td>{{builddirectory}}</td> </tr>
+      <tr align="left"> <td>Enable Integration Test</td> <td>{{integrationtest}}</td> </tr>
+      <tr align="left"> <td>Enable Development Test</td> <td>{{developmenttest}}</td> </tr>
+      <tr align="left"> <td>Test Jar File</td> <td>{{testframeworkjar}}</td> </tr>
+      <tr align="left"> <td>Test XML Template</td> <td>{{testtemplatexml}}</td> </tr>
+      <tr align="left"> <td>Platform XML Template</td> <td>{{platformtemplatexml}}</td> </tr>
+      <tr align="left"> <td>Code Load XML Template</td> <td>{{codeloadtemplatexml}}</td> </tr>
+      <tr align="left"> <td>Code Load XML</td> <td>{{codeloadxml}}</td> </tr>
+      <tr align="left"> <td>Disable Code Load</td> <td>{{disablecodeload}}</td> </tr>
+      <tr align="left"> <td>Disable TestFramework DB</td> <td>{{disabletestframeworkDB}}</td> </tr>
+      <tr align="left"> <td>Use Only Latest Build</td> <td>{{uselatestbuild}}</td> </tr>
+      <tr align="left"> <td>Build Range</td> <td>{{buildrange}}</td> </tr>
+      <tr align="left"> <td>Est. Test Run Time</td> <td>{{testruntime}}</td> </tr>
+      <tr align="left"> <td>Test Manger Loop Delay</td> <td>{{tmgrloopdelay}}</td> </tr>
+      <tr align="left"> <td>Test Directory</td> <td>{{testdirectory}}</td> </tr>
+      <tr align="left"> <td>Test Manager Version</td> <td>{{testmgrversion}}</td> </tr>
+      <tr align="left"> <td>Disable Test</td> <td>{{disabletest}}</td> </tr>
+      <tr align="left"> <td>Execution Server1</td> <td>{{exeserver1}}</td> </tr>
+      <tr align="left"> <td>Execution Server2</td> <td>{{exeserver2}}</td> </tr>
+      <tr align="left"> <td>Execution Server3</td> <td>{{exeserver3}}</td> </tr>
+      <tr align="left"> <td>Execution Server4</td> <td>{{exeserver4}}</td> </tr>
+      <tr align="left"> <td>Server1 Enable</td> <td>{{server1enable}}</td> </tr>
+      <tr align="left"> <td>Server2 Enable</td> <td>{{server2enable}}</td> </tr>
+      <tr align="left"> <td>Server3 Enable</td> <td>{{server3enable}}</td> </tr>
+      <tr align="left"> <td>Server4 Enable</td> <td>{{server4enable}}</td> </tr>
+      {{!-- 
+      <tr align="left"> <td>Test Manager</td> <td>{{testmanager}}</td> </tr> 
+      <tr align="left"> <td>Test Mode</td> <td>{{testmgrmode}}</td> </tr>
+      --}}
+    {{/each}}
+  </table>
+</div>
+
+

@@ -1,0 +1,615 @@
+/* ---- Simplified CSS Test ---- */
+
+/* ---- Set backround color & borders ---- */
+body {
+    margin: 0;
+    padding: 0;
+    border: 20px solid #003366;
+    border-style: solid;
+    background-color: lightgray;
+/*    min-width: 600px;*/
+}
+
+/* ---- horizontal line ---- */
+
+hr {
+    width:95%;
+    border: 3px solid gray;
+}
+
+a {
+    text-decoration:none;
+}
+
+.indentLink {
+
+    text-indent:30px;
+    font-weight: bold;
+
+
+}
+
+.indentTextBold {
+
+    text-indent:30px;
+    font-weight: bold;
+    text-decoration: underline;
+
+}
+
+.formIndent {
+  margin-left: 60px;
+}
+
+.targetDiv {
+  padding-left: 50px;
+}
+
+#table {
+    width:100%;
+    max-width:1200px; 
+    border: 2px solid black;
+    color: black;  
+/*  width="100%" border="0" cellpadding="0" cellspacing="0" */
+}
+
+/* Used */
+#targettable {
+    width:100%;
+    max-width:900px; 
+    border: 2px solid black;
+    color: black;  
+}
+
+/* Used */
+#buildtable {
+    width:100%;
+    max-width:1000px; 
+    border: 2px solid black;
+    color: black;  
+}
+
+/* Used */
+#tabletable {
+    width:100%;
+    max-width:1100px; 
+    border: 2px solid black;
+    color: black;  
+}
+
+/* Used */
+#configtable {
+    width:100%;
+    max-width:700px; 
+    border: 2px solid black;
+    color: black;  
+}
+
+
+/* Center table on page */
+ table.sortable {
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+.editLink {
+    font-weight: bold;
+    text-align:center;
+    font-size: 25px; 
+}
+
+
+tr {
+    border: 2px solid black;
+    text-align:center;
+    font-weight: bold;
+    
+}
+
+.tabletitles{
+  text-align:center;
+}
+
+/* ---- Title Text ---- */
+
+.titletiny {
+    font-family: "Times New Roman", Times;
+    font-size: 10px;   
+    color: #033784;  /* blue generic text */
+}
+
+.titlelittle {
+    font-family: "Times New Roman", Times;
+    font-size: 15px;   
+    color: #033784;  /* blue generic text */
+}
+
+.titlesmall {
+    font-family: "Times New Roman", Times;
+    font-size: 20px;   
+    color: #033784;  /* blue generic text */
+}
+
+.titlebig {
+    font-family: "Times New Roman", Times;
+    font-size: 150px;   
+    color: #033784;  /* blue generic text */
+    text-shadow: 2px 2px 4px black;
+}
+
+/* ---- image upper right corner ---- */
+
+#topcontainer {
+    position: relative;
+}
+
+.container {
+  width: 80%;
+  margin: 15px auto;
+}
+
+#chartWindow {
+  width: 70%;
+  height: 50%;
+}
+
+#generic-image1 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 3px black;
+    border-style: solid;
+    
+/*    box-shadow: 10px 10px grey;*/
+    
+
+    height: auto; 
+    width: auto; 
+    max-width: 120px; 
+    max-height: 200px;
+
+}
+
+
+#generic-image2 {
+    position: absolute;
+    top: 50px;
+    right: 80px;
+    border: 3px black;
+    border-style: solid;
+/*    box-shadow: 10px 10px grey;*/
+    
+    height: auto; 
+    width: auto; 
+    max-width: 120px; 
+    max-height: 200px;
+}
+
+#generic-image3 {
+    position: absolute;
+    top: 10px;
+    right: 180px;
+    border: 3px black;
+    border-style: solid;
+    
+/*    box-shadow: 10px 10px grey;*/
+    
+    height: auto; 
+    width: auto; 
+    max-width: 120px; 
+    max-height: 200px;
+}
+
+#generic-image111 {
+    position: absolute;
+    left: 350px;
+    border: 3px black;
+    border-style: solid;
+
+}
+
+/* ---- Menu text---- */
+.tabs-wrapper {
+    font-family: "Times New Roman", Times;
+    font-size: 30px;
+    font-weight: bold;
+    
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+} 
+
+/* ---- bottom of page---- */
+.buttonicons {
+    border: 1px solid black;
+}
+
+#allbuttonicons {
+    /* This centers icons */
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#helpimage {
+  height: 50%;
+  width: 50%;
+  position: relative;
+  left:50px;
+
+}
+
+.heading27 {
+  display:inline; 
+  font-size: 40px;
+  font-weight: bold;   
+  position: relative;
+  left:50px;
+  color: black; //#033784;
+  text-decoration: underline;
+}
+
+/* ---- Configuration Stuff---- */
+
+
+/* Target Table Settings */
+
+.targetXML {
+/*    display:inline; */
+    color: orange; //#163059;
+    /*float:left;
+    width: 300px;
+    text-align: center;*/
+}
+
+/*input.targetXML, textarea { 
+    width: 200px; 
+    height: 20px;
+    background-color: #b6bbc4; 
+    box-shadow: 1px 1px 1px darkgray;
+    text-overflow: ellipsis; 
+}*/
+
+/*.numberField {
+  color: #163059;
+  float:left;
+  width: 150px;
+  text-align: center;
+}*/
+
+/*input.numberField, textarea { 
+    width: 40px; 
+    height: 20px;
+    background-color: #b6bbc4; 
+    box-shadow: 1px 1px 1px darkgray;
+}*/
+
+/*.nameField {
+  color: #163059;
+  float:left;
+  width: 150px;
+  text-align: left;
+}*/
+
+/*input.nameField, textarea { 
+    width: 125px; 
+    height: 20px;
+    background-color: #b6bbc4; 
+    box-shadow: 1px 1px 1px darkgray;
+}
+*/
+
+
+/*.XMLData {
+    display:inline; 
+    color: #033784; 
+}*/
+
+
+/*input.XMLData, textarea { 
+    width: 400px; 
+    height: 30px;
+    background-color: #f2f2f2;  
+    border-color: black;
+
+}*/
+
+
+
+/*.targetCell {
+  white-space: nowrap;
+  //height: 30px;
+  float:left;
+}*/
+
+
+
+
+/*.target-table {
+    border: 5px solid gray;
+    //text-align:center;
+    width:100%;
+    max-width:900px; 
+    margin: auto; 
+}*/
+
+
+table, tr, th, td, thead {
+    border: 1px solid gray;
+    text-align:center;
+}
+
+/*.blockDiv {
+  border: 5px solid gray;
+  max-width:900px; 
+  position: relative;
+  left:50px;
+}*/
+
+/*.rowDiv {
+      display:inline; 
+}*/
+
+/*.input-w label, .input-w input {
+    float: none;  if you had floats before? otherwise inline-block will behave differently 
+    display: inline-block;
+    vertical-align: middle;    
+}*/
+
+/*#target-header {
+    color: #033784;
+    font-size: 20px;
+    font-weight: bold;   
+}*/
+
+.text-but {
+    text-align:center;
+}
+
+/*.configCkbox {
+    position: relative;
+    top: 5px;
+}*/
+
+
+/*.browseBut {
+    width: 50px;
+    height: 25px;
+    text-align: center;
+    margin: auto;
+    font-size: 12px;
+    vertical-align: middle;
+    background: url("../img/browse.png") -2px -1px no-repeat;
+}*/
+
+/*.pingBut {
+    width: 50px;
+    height: 25px;
+    text-align: center;
+    margin: auto;
+    font-size: 12px;
+    vertical-align: middle;
+/*    background: url("../img/ping2.png") 2px 1px no-repeat;  */
+}*/
+
+
+/* ----------------------------- */
+
+
+/* ------  table stuff ------------ */
+
+
+/*.serverData {
+/*    display:inline; */
+/*    color: darkblue;*/
+    color: #033784;
+    float:left;
+    width: 150px;
+    text-align: center;
+}*/
+
+/*input.serverData, textarea { 
+    width: 100px; 
+    height: 20px;
+    background-color: #f0f0f5; /* #c2c2d6 */
+}*/
+
+/*.configRadio {
+    margin:50px;
+}
+*/
+/*.server-table {
+    border: 5px solid gray;
+    text-align:center;
+    width:100%;
+    max-width:900px; 
+    margin: auto; 
+}*/
+
+/* ----------------------------- */
+
+
+
+/* ------ test framework ------------ */
+
+/*#test-framework {*/  
+/*
+    border: 5px solid black;
+    margin: auto; 
+    width:600px;
+    height:200px;
+*/
+    
+    
+}
+
+/*.test-table {
+    border: 5px solid gray;
+    text-align:center;
+    width:100%;
+    max-width:900px; 
+    margin: auto; 
+    
+    
+}*/
+
+/*.table-heading {
+    color: #033784;
+    font-size: 20px;
+    font-weight: bold;   
+    
+}*/
+
+/*.table-label {
+    color: #033784;
+    font-size: 20px;
+    font-weight: bold;   
+    
+}*/
+
+/*#test-mgr {
+    float: left;
+   width: auto;
+   margin-left: 3em;
+    display: inline;
+}*/
+
+/*.jar-data {
+    color: black;
+    width: 200px;
+    text-align: center;
+}
+*/
+
+/*input.jar-data, textarea { 
+    width: 200px; 
+    height: 20px;
+    background-color: #f0f0f5;  
+    text-align: center;
+   
+}*/
+
+/*.box-but {
+    text-align: center;
+}
+*/
+
+/* ----------------------------- */
+
+
+
+
+/* ------ update ------------ */
+
+
+
+/*.update-config {
+    border: 5px solid gray;
+    text-align:center;
+    width:100%;
+    max-width:900px; 
+    margin: auto;  
+    height: 75px;
+}
+*/
+/*.update-button {
+    color: #033784;
+    background: gray;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 15px;
+}
+*/
+
+
+/* ----------------------------- */
+
+/*#generic-util {
+    color: #033784;
+    font-weight: bold; 
+
+    text-decoration: underline;
+    text-align: center;
+}
+*/
+
+/*#logout {
+    font-weight: bold;
+}*/
+
+/*#genericbottomtext {
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+}
+*/
+/* home page */
+
+/*#graphsection1 {
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    border: 2px solid black;
+}*/
+
+/*#graphsection2 {
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    border: 2px solid black;
+}*/
+
+.graphImage {
+    
+     height: auto; 
+    width: auto; 
+    max-width: 300px; 
+}
+
+#greetingmessage {
+    font-family: "Times New Roman", Times;
+    font-size: 15px;   
+    color: black;  
+    padding: 30px;
+    
+}
+
+.greetingmessage2 {
+    font-family: "Times New Roman", Times;
+    font-size: 20px;   
+    color: black;  
+    position: relative;
+    left: 50px;
+    
+}
+
+/* --- login buttons -- */
+/*.btn {
+    background-color: #033784; 
+} */
+
+/*.btn:focus {
+    background-color: white !important; 
+}*/
+
+/*.centerBlock {
+    font-family: "Times New Roman", Times;
+    font-size: 20px;
+    font-weight: bold;
+    color: darkgreen;
+    text-align: center; 
+}*/
+
+/*.loginBlock {
+    top:50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%, 0);
+    position: absolute;
+    
+}*/
+
+/*#configtext {
+    text-indent: 50px;
+}
+*/
