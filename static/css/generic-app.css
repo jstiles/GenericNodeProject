@@ -1,0 +1,130 @@
+/*
+// -----------------------------------------------------------------------------
+// -- Generic NodeJS Application: MVC Design
+// -- File: generic-app.css
+// -- Description:
+// -- Author:
+// -- Date:
+// -- Version: 
+// -----------------------------------------------------------------------------
+*/
+
+/* ---- Set backround color & borders ---- */
+body {
+    margin: 0;
+    padding: 0;
+    ##border: 20px solid black; 
+    ##border-style: solid;
+    background-color: #ffffe6; 
+}
+
+/* ---- horizontal line ---- */
+.line1 {
+  width:95%;
+  border: 2px lightgray;
+  padding-left: 60px;
+}
+
+a {
+    text-decoration:none;
+}
+
+.date1 {
+  /*width: 100px;
+  border: 1px gray;
+  max-width: 50;
+  background-color : white;*/
+  display: inline-block;
+}
+
+.dateFieldFormat {
+  font-size: 13px;
+  color:darkblue;
+}
+
+.numberFieldFormat {
+  display:inline;
+  color:darkblue;
+  font-weight: bold;
+}
+
+.page1Div {
+  padding-left: 50px;
+  font-weight: bold;
+}
+
+.editLink {
+    font-weight: bold;
+    text-align:center;
+    font-size: 25px; 
+}
+
+
+tr {
+    border: 2px solid black;
+    text-align:center;
+    font-weight: bold;
+}
+td {
+    border: 2px solid black;
+    text-align:center;
+    font-weight: normal;
+}
+
+.titletiny {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;   
+    color: black; 
+}
+
+.titlelittle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;   
+    color: black; 
+}
+
+.titlesmall {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;   
+    color: black;  
+}
+
+.title-extra-large {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 150px;   
+    color: #e65c00; 
+    text-shadow: 2px 2px 4px black;
+    text-align:center;
+}
+
+#generic-image1 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 3px black;
+    border-style: solid;
+        
+    height: auto; 
+    width: auto; 
+    max-width: 300px; 
+    max-height: 250px;
+}
+
+/* ---- Main menu text ---- */
+.tabs-wrapper {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    color:orange;
+} 
+
+#home-message {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;   
+    color: black;  
+    padding: 30px;
+    
+}

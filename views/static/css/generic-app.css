@@ -1,0 +1,1052 @@
+/*
+// -----------------------------------------------------------------------------
+// -- Generic NodeJS Application: MVC Design
+// -- File: router.js
+// -- Description:
+// -- Author:
+// -- Date:
+// -- Version: 
+// -----------------------------------------------------------------------------
+*/
+
+/* ---- Set backround color & borders ---- */
+body {
+    margin: 0;
+    padding: 0;
+    border: 20px solid black; /*#4d4d4d; #3d3d5c;*/
+    /*border-radius: 15px;*/
+/*border-radius: 5px 10px 15px 20px;*/
+/*border-radius: 30px/10px;*/
+
+    border-style: solid;
+    background-color: #e6e6e6; /*#66cc99; #9494b8;  #004d4d; #e6e6e6; #e6f7ff;  #ccccff lightgray; */
+/*    min-width: 600px;*/
+}
+
+/* ---- horizontal line ---- */
+
+.line1 {
+  width:95%;
+  border: 2px lightgray;
+  padding-left: 60px;
+}
+
+a {
+    text-decoration:none;
+}
+
+input[type="text"] 
+{
+    width: 220px;
+    border: 1px gray;
+    max-width: 255;
+    background-color : white;
+    display: block;
+    color: black;
+    /*overflow: hidden;
+    white-space: nowrap !important;*/
+    display: inline !important;
+
+}
+
+input[type=checkbox], input[type=radio] {
+  vertical-align: middle;
+  position: relative;
+  top: 2px;
+}
+
+input[type=number]{
+    width: 100px;
+} 
+
+.incrementer1 {
+  width: 50px;
+  border: 1px gray;
+  max-width: 50;
+  background-color : white;
+  display: inline-block;
+}
+
+
+
+.date1 {
+  /*width: 100px;
+  border: 1px gray;
+  max-width: 50;
+  background-color : white;*/
+  display: inline-block;
+}
+
+.dateFieldFormat {
+
+  font-size: 13px;
+  color:darkblue;
+}
+
+.numberFieldFormat {
+  display:inline;
+  color:darkblue;
+  font-weight: bold;
+}
+
+.indentLink {
+
+    text-indent:30px
+    font-weight: bold;
+
+
+}
+
+.indentTextBold {
+
+    text-indent:30px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+
+}
+
+.dontIndentTextBold {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+
+.formIndent {
+  margin-left: 60px;
+  font-weight: bold;
+}
+
+.targetDiv {
+  padding-left: 50px;
+  font-weight: bold;
+}
+
+.genericAddDiv {
+  /*padding-left: 50px;
+  font-weight: bold;*/
+  /*height: 1500px;*/
+}
+
+.AddDiv {
+  /*background-color: orange;*/
+}
+
+#table {
+  /*table-layout:fixed;*/
+    width:100%;
+    max-width:1200px; 
+    border: 2px solid black;
+    color: black;  
+/*  width="100%" border="0" cellpadding="0" cellspacing="0" */
+}
+
+/* Used */
+#targettable {
+    width:100%;
+    max-width:1000px; 
+    border: 2px solid black;
+    color: black;  
+}
+
+/* Used */
+#buildtable {
+    width:100%;
+    max-width:1000px; 
+    border: 2px solid black;
+    color: black;  
+}
+
+/* Used */
+#tabletable {
+    width:100%;
+    max-width:1100px; 
+    border: 2px solid black;
+    color: black;  
+    /* add horizontal scroll bars */
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* Used */
+#basetable {
+    width:100%;
+    max-width:900px; 
+    border: 2px solid black;
+    color: black;  
+    /*margin-top:10px; 
+    margin-right:100px; */
+    /* add horizontal scroll bars */
+    display: block;
+    /*display: hidden;*/
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#genericDetails {
+    width:100%;
+    max-width:900px; 
+    border: 2px solid black;
+    color: black;  
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#genericProperties {
+    width:100%;
+    max-width:900px; 
+    border: 2px solid black;
+    color: black;  
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#genericTable {
+    width:100%;
+    max-width:900px; 
+    border: 2px solid black;
+    color: black;  
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+table, tr, th, td, thead {
+    border: 2px solid black;
+    text-align:center;
+}
+
+
+#baseTable {
+    width:100%;
+    max-width:1200px; 
+    border: 2px solid black;
+    color: black;  
+    /* add horizontal scroll bars */
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    /*float: left;*/
+}
+
+#generic {
+    width:100%;
+    max-width:1100px; 
+    border: 2px solid black;
+    color: black;  
+    /* add horizontal scroll bars */
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.menuTable1 {
+  max-width:500px; 
+  /*caption-side:top !important;*/
+}
+.menuTable2 {
+  max-width:500px; 
+  /*caption-side:top !important;*/
+  left: 50px;
+  top: 180px;
+  /*float: left;*/
+}
+.menuTable3 {
+  max-width:500px; 
+  /*caption-side:top !important;*/
+  left: 50px;
+  top: 180px;
+  /*float: left;*/
+}
+
+/* Used */
+#configtable {
+    width:100%;
+    max-width:700px; 
+    border: 2px solid black;
+    color: black;  
+}
+
+
+/* Center table on page */
+ table.sortable {
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+.editLink {
+    font-weight: bold;
+    text-align:center;
+    font-size: 25px; 
+}
+
+
+tr {
+    border: 2px solid black;
+    text-align:center;
+    font-weight: bold;
+}
+td {
+    border: 2px solid black;
+    text-align:center;
+    font-weight: normal;
+}
+
+.tabletitles{
+  text-align:center;
+}
+
+/* ---- Title Text ---- */
+
+.titletiny {
+    font-family: "Times New Roman", Times;
+    font-size: 10px;   
+    color: black; /*  #4d79ff; #033784;  blue sact text */
+}
+
+.titlelittle {
+    font-family: "Times New Roman", Times;
+    font-size: 15px;   
+    color: black; /* #4d79ff; #033784;  blue sact text */
+}
+
+.titlesmall {
+    font-family: "Times New Roman", Times;
+    font-size: 20px;   
+    color: black;  /* #4d79ff; #033784;  blue sact text */
+}
+
+.titlebig {
+    font-family: "Times New Roman", Times;
+    font-size: 150px;   
+    color: black; /* #033784;  blue sact text */
+    text-shadow: 2px 2px 4px black;
+}
+
+/* ---- saber printer image upper right corner ---- */
+
+#topcontainer {
+  position: relative;
+}
+
+#genericwizard {
+  position: relative;
+  border: 3px black;
+  border-style: solid;
+}
+
+#cancelbut {
+
+  width: 80px;
+  font-size: 20px;
+  padding-left: 6px;
+  position: relative;
+  left: 130px;
+  border: 3px lightgray;
+  border-style: solid;
+
+}
+
+.container {
+  width: 80%;
+  margin: 15px auto;
+  border: 3px black;
+  border-style: solid;
+}
+
+#chartWindow {
+  width: 100%;
+  height: 60%;
+}
+
+#generic_image1 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 3px black;
+    border-style: solid;
+    
+/*    box-shadow: 10px 10px grey;*/
+    
+    
+    height: auto; 
+    width: auto; 
+    max-width: 300px; 
+    max-height: 250px;
+
+}
+
+#genericimage2 {
+    position: absolute;
+    top: 50px;
+    right: 80px;
+    border: 3px black;
+    border-style: solid;
+/*    box-shadow: 10px 10px grey;*/
+    
+    height: auto; 
+    width: auto; 
+    max-width: 120px; 
+    max-height: 200px;
+}
+
+#genericimage3 {
+    position: absolute;
+    top: 10px;
+    right: 180px;
+    border: 3px black;
+    border-style: solid;
+    
+/*    box-shadow: 10px 10px grey;*/
+    
+    height: auto; 
+    width: auto; 
+    max-width: 120px; 
+    max-height: 200px;
+}
+
+/* ---- Menu text---- */
+.tabs-wrapper {
+    font-family: "Times New Roman", Times;
+    font-size: 30px;
+    font-weight: bold;
+    
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+} 
+
+/* ---- bottom of page---- */
+.buttonicons {
+    border: 1px solid black;
+}
+
+#allbuttonicons {
+    /* This centers icons */
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.inlineButtonsLeft {
+  /*float: left;*/
+  display: inline;
+  border: 1px black;
+  border-style: solid;
+  padding: 11px;
+  position: relative;
+  left: 40px;
+}
+
+.inlineButtonsLeft2 {
+  float: left;
+  display: inline;
+  border: 3px darkgray;
+  border-style: solid;
+  padding: 11px;
+  position: relative;
+  left: 15px;
+}
+
+.inlineButtonsLeft3 {
+  float: left;
+  display: inline;
+  border: 3px darkgray;
+  border-style: solid;
+  padding: 11px;
+  position: relative;
+  left: 65px;
+}
+
+.inlineButtonsLeft4 {
+  float: left;
+  display: inline;
+  /*border: 3px darkgray;*/
+  /*border-style: solid;*/
+  padding: 11px;
+  /*position: relative;
+  left: 165px;*/
+}
+
+.inlineButtonsLeft5 {
+  float: left;
+  display: inline;
+  /*border: 3px darkgray;*/
+  /*border-style: solid;*/
+  padding: 11px;
+  position: relative;
+  left: 5px;
+  bottom: 15px;
+}
+
+.cancelBut {
+  float: left;
+  display: inline;
+  border: 3px darkgray;
+  border-style: solid;
+  padding: 11px;
+  position: relative;
+  left: 15px;
+}
+
+
+
+
+
+#helpimage {
+  height: 50%;
+  width: 50%;
+  position: relative;
+  left:50px;
+
+}
+
+.heading27 {
+  display:inline; 
+  font-size: 40px;
+  font-weight: bold;   
+  position: relative;
+  left:50px;
+  color: black; //#033784;
+  text-decoration: underline;
+}
+
+.text-but {
+    text-align:center;
+}
+
+
+#greetingmessage {
+    font-family: "Times New Roman", Times;
+    font-size: 15px;   
+    color: black;  
+    padding: 30px;
+    
+}
+
+.greetingmessage2 {
+    font-family: "Times New Roman", Times;
+    font-size: 20px;   
+    color: black;  
+    position: relative;
+    left: 50px;
+    
+}
+
+#welcometext {
+    font-family: "Times New Roman", Times;
+    font-size: 18px;   
+    color: black;  
+    padding: 30px;
+    
+}
+
+.tableColumn1 {
+  position: relative;
+  left: 5px;
+  top:0px;
+
+}
+.tableColumn2 {
+  position: relative;
+  left: 150px;
+  bottom: 260px;
+
+}
+.tableColumn3 {
+  position: relative;
+  left: 300px;
+  bottom: 440px;
+
+}
+
+.genericColumn1 {
+  position: relative;
+  left: 5px;
+  top:30px;
+}
+.genericColumn2 {
+  position: relative;
+  left: 150px;
+  bottom:320px;
+}
+.genericColumn2b {
+  /*position: relative;*/
+  left: 250px;
+  /*bottom:320px;*/
+}
+.genericColumn3 {
+  position: relative;
+  left: 300px;
+  bottom:670px;
+}
+.genericColumn4 {
+  position: relative;
+  left: 450px;
+  bottom:1020px;
+}
+.genericColumn5 {
+  position: relative;
+  left: 600px;
+  bottom:1370px;
+}
+.genericColumn6 {
+  position: relative;
+  left: 750px;
+  bottom:1720px;
+}
+
+.detailgenericColumn1 {
+  position: relative;
+  left: 20px;
+  top:30px;
+}
+.detailgenericColumn2 {
+  position: relative;
+  left: 400px;
+  bottom:330px;
+}
+
+
+
+
+.divBorder1 {
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  width: 450px;
+  height: 350px;
+   
+}
+
+.divBorder2 {
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  width: 420px;
+  height: 400px;
+   
+}
+
+.divBorder3 {
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  height: 1200px;
+/*  width: 1000px;
+  height: 500px;*/
+   
+}
+
+.divBorder4 {
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  width: 900px;
+  height: 450px;
+   
+}
+
+.divBorder5 {
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+/*  width: 1000px;
+  height: 950px;*/
+  /*position:relative;*/
+
+   
+}
+
+.divBorder6 {
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  width: 800px;
+  height: 420px;
+}
+
+.divBorder7 {
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  width: 800px;
+  height: 500px;
+}
+
+.divBorder8 {
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  width: 800px;
+  height: 350px;
+}
+
+
+.divBorderDelay {
+  /*transition-delay: 2s; */
+  float: left;
+}
+
+.entryField {
+  width: 225px !important ;
+  display: inline-block;
+  border: 1px solid gray;
+}
+.entryField2 {
+  width: 225px !important ;
+  display: inline-block;
+  border: 1px solid gray;
+  position: relative;
+  left: 15px;
+}
+
+.entryField3 {
+  width: 225px !important ;
+  display: inline-block;
+  border: 1px solid gray;
+  position: relative;
+  left: 0px;
+}
+
+.entryFieldLong1  {
+  width: 575px !important ;
+  background-color: white;
+  /*width: 100%;*/
+  display: inline-block;
+  border: 1px solid gray;
+  /*position: relative;
+  left: 0px;*/
+}
+.entryFieldLong2  {
+  width: 525px !important ;
+  background-color: white;
+  /*width: 100%;*/
+  display: inline-block;
+  border: 1px solid gray;
+  /*position: relative;
+  left: 0px;*/
+}
+
+.labelBox1 {
+  width: 225px !important ;
+  display: inline;
+  position: relative;
+  right: 45px;
+  
+}
+
+.tableAddBut {
+  position: relative;
+  top: 70px;
+}
+
+.menu_add {
+  float: left;
+  position: relative;
+  right: 0px;
+  top: 200px;
+}
+
+.baseColumn1 {
+  position: relative;
+  left: 25px;
+  top: 25px;
+}
+.baseColumn2 {
+  position: relative;
+  left: 310px;
+  bottom: 440px;
+}
+.baseColumn3 {
+  position: relative;
+  left: 640px;
+  bottom: 780px;
+}
+
+.detailColumn1 {
+  position: relative;
+  left: 20px;
+  bottom: 0px;
+}
+.detailColumn2 {
+  position: relative;
+  left: 420px;
+  bottom: 380px;
+}
+/*.detailColumn3 {
+  position: relative;
+  left: 640px;
+  bottom: 1180px;
+}
+*/
+.genericHeader {
+  /*text-align: center;*/
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#target_add_submit {
+  position: relative;
+  left: 0px;
+  top: 60px;
+
+}
+
+.target_baseadd_submit {
+  width: 40%;
+
+  /*margin-left: 30%;
+  margin-right: 30%;*/
+
+}
+
+
+
+
+.baseColumn1b {
+  position: relative;
+  left: 20px;
+  top: 30px;
+}
+.baseColumn2b {
+  position: relative;
+  left: 250px;
+  bottom: 380px;
+}
+.baseColumn3b {
+  position: relative;
+  left: 500px;
+  bottom: 700px;
+}
+
+/* checkbox group for hiding columns */
+.colSelect {
+  display:inline;
+  font-family: "Times New Roman", Times;
+  font-size: 10px;   
+  color: black;  
+
+}
+.colSelectBP {
+  display:inline;
+  font-family: "Times New Roman", Times;
+  font-size: 10px;   
+  color: black;  
+
+}
+
+#grpChkBox {
+  display: none;
+}
+
+#grpChkBoxBP {
+  display: none;
+}
+
+/*#showHideContainer {
+  display: inline;
+  border: 1px black;
+  border-style: solid;
+  padding: 11px;
+  position: relative;
+  left: 57px;
+
+}*/
+
+#showHideContainerBP2 {
+  float:right;
+  display: inline;
+  border: 1px black;
+  border-style: solid;
+  padding: 1px;
+  position: relative;
+  /*left: 100px;*/
+
+}
+
+.columnNum {
+  font-family: "Times New Roman", Times;
+  font-size: 10px;
+  height:10px;
+}
+
+#table_add_Mfg {
+  width : 160px;
+}
+
+/* --- login buttons -- */
+/*.btn {
+    background-color: #033784; 
+} */
+
+/*.btn:focus {
+    background-color: white !important; 
+}*/
+
+/*.centerBlock {
+    font-family: "Times New Roman", Times;
+    font-size: 20px;
+    font-weight: bold;
+    color: darkgreen;
+    text-align: center; 
+}*/
+
+/*.loginBlock {
+    top:50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%, 0);
+    position: absolute;
+    
+}*/
+
+/*#configtext {
+    text-indent: 50px;
+}
+*/
+
+
+/* -------------------------------------------------------------------------- */
+/* Column Layout Design */
+/* Create 3 equal columns that floats next to each other */
+.genericColumnA {
+    float: left;
+    width: 33%;
+    padding: 0px;
+    /*height: 300px;*/
+}
+
+.genericColumnB {
+    float: left;
+    position: relative;
+    left: 30px;
+    width: 33%;
+    padding: 50px;
+    bottom: 40px;
+    /*height: 300px;*/
+}
+
+.genericColumnC {
+    float: left;
+    position: relative;
+    width: 33%;
+    padding: 0px;
+    top: 10px;
+    /*height: 300px;*/
+}
+
+/* Clear floats after the columns */
+.genericRow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.genericUnits {
+  position: relative;
+  left: 50px;
+
+}
+
+.inlineBut {
+  display: inline;
+  float:left;
+}
+
+.textRightInput {
+  position: relative;
+  left: 10px;
+}
+
+/*.textEntryBox {
+  border: 3px solid #555;
+
+}*/
+
+/*.inlineCheckText {
+  display: inline;
+  white-space: nowrap;
+}*/
+
+.inlineCheckText input,
+.inlineCheckText label {
+  display: inline-block;
+  margin-bottom: 0; 
+  vertical-align: middle;
+}
+
+.dropValue {
+  display: inline;
+  color: darkblue;
+}
+
+.dlist {
+  /*border: 3px solid #555;*/
+  border: 6px orange;
+  border-color: orange;
+}
+
+.menuItem1 {
+  float: left;
+  width: 300px;
+  border: 3px solid darkgray;
+  padding: 10px;
+  /*overflow: hidden;
+  white-space: nowrap !important;*/
+  display: inline !important;
+}
+
+.lableInline {
+  display: inline;
+  padding-right: 10px;
+}
+
+.lableInline2 {
+  display: inline;
+  padding-left: 60px;
+}
+
+.lableInline3 {
+  display: inline;
+  padding-left: 45px;
+}
+
+/* DataTable Parameters */
+table.dataTable thead tr {
+  background-color: #6699cc;
+}
+
+/*table.dataTable tbody tr {
+  background-color: orange;
+}*/
+
+/*tbody {
+  background-color:orange;
+}*/
+
+table.display tr.even td:hover{
+    background-color: lightyellow;
+}
+
+table.display tr.odd td:hover{
+    background-color: lightblue;
+}
+
+#generic_idx_delete {
+  color: darkred;
+  font-weight: bold;
+}
+#generic_idx_edit {
+  color: darkgreen;
+  font-weight: bold;
+}
+#generic_idx_email {
+  color: darkblue;
+  font-weight: bold;
+}
+
+/* -------------------------------------------------------------------------- */

@@ -5,6 +5,8 @@
 // -- Author:
 // -- Date:
 // -- Version: 
+// -- Credit: Based on Web Development with Node and Express: 
+// --         Leveraging the JavaScript Stack by Ethan Brown
 // -----------------------------------------------------------------------------
 
 // -- Object to hold configuration data

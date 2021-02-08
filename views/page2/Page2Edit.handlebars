@@ -1,0 +1,21 @@
+{{!-- 
+// -----------------------------------------------------------------------------
+// -- Generic NodeJS Application: MVC Design
+// -- File: page2 : Page2Edit.handlebars
+// -- Description:
+// -- Author:
+// -- Date:
+// -- Version: 
+// -- Credit: Based on Web Development with Node and Express: 
+// --         Leveraging the JavaScript Stack by Ethan Brown
+// -----------------------------------------------------------------------------
+ --}}
+
+  <form class="formIndent" method="post" action="/page2/edit">
+      <input name="id" type="hidden" value="{{ page2._id }}" />
+      <label>Var1</label> <input name="var1" type="text" value="{{ page2.VAR1 }}" />
+      <label>Var2</label> <input name="var2" type="text" value="{{ page2.VAR2 }}" />
+      <label>Var3</label> <input name="var3" type="text" value="{{ page2.VAR3 }}" />
+      <label>Enabled</label> <input name="enabled" type="checkbox" value="enabled" {{#if page2.ENABLE}}checked{{/if}} />
+      <input type="submit" value="Submit" />
+  </form>
